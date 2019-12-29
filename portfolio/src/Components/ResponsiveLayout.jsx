@@ -5,7 +5,7 @@ function ResponsiveLayout(){
     return(
         <Grid container columns={3} stackable>
             <Grid.Column>
-              <Segment>Content</Segment>
+              <Segment>JavaScript</Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>Content</Segment>
