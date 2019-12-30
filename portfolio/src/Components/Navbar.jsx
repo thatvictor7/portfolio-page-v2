@@ -45,7 +45,7 @@ export default class Navbar extends Component {
         return (
             <div>
                 <Segment style={style.barContainer} inverted>
-                    <Menu size='large' style={style.bar} inverted pointing secondary>
+                    <Menu size='large' style={style.bar} stackable inverted pointing secondary>
                         <div style={style.logoContainer} position='left'> 
                             <img style={style.logo} alt='logo' src={require('./vm-logo.png')} />
                         </div>
@@ -79,6 +79,36 @@ export default class Navbar extends Component {
                         />
                     </Menu>
                 </Segment>
+
+        {/* <Menu stackable>
+        <Menu.Item>
+          <img src='/logo.png' />
+        </Menu.Item>
+
+        <Menu.Item
+          name='features'
+          active={activeItem === 'features'}
+          onClick={this.handleItemClick}
+        >
+          Features
+        </Menu.Item>
+
+        <Menu.Item
+          name='testimonials'
+          active={activeItem === 'testimonials'}
+          onClick={this.handleItemClick}
+        >
+          Testimonials
+        </Menu.Item>
+
+        <Menu.Item
+          name='sign-in'
+          active={activeItem === 'sign-in'}
+          onClick={this.handleItemClick}
+        >
+          Sign-in
+        </Menu.Item>
+      </Menu> */}
             </div>
         )
     }
