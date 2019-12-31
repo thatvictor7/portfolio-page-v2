@@ -8,8 +8,8 @@ const style = {
     }
 }
 
-function ResponsiveLayout(){
-    return(
+function ResponsiveLayout() {
+    return (
         <div>
             <Divider horizontal>
                 <Header style={style.skillsText} as='h4'>
@@ -19,22 +19,22 @@ function ResponsiveLayout(){
             </Divider>
             <Grid container columns={3} stackable>
                 <Grid.Column>
-                  <Segment>JavaScript</Segment>
+                    <Segment>JavaScript</Segment>
                 </Grid.Column>
                 <Grid.Column>
-                  <Segment>Content</Segment>
+                    <Segment>Content</Segment>
                 </Grid.Column>
                 <Grid.Column>
-                  <Segment>Content</Segment>
+                    <Segment>Content</Segment>
                 </Grid.Column>
                 <Grid.Column>
-                  <Segment>Content</Segment>
+                    <Segment>Content</Segment>
                 </Grid.Column>
                 <Grid.Column>
-                  <Segment>Content</Segment>
+                    <Segment>Content</Segment>
                 </Grid.Column>
                 <Grid.Column>
-                  <Segment>Content</Segment>
+                    <Segment>Content</Segment>
                 </Grid.Column>
             </Grid>
         </div>
