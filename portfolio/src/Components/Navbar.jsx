@@ -47,7 +47,7 @@ export default class Navbar extends Component {
                 <Segment style={style.barContainer} inverted>
                     <Menu size='large' style={style.bar} stackable inverted pointing secondary>
                         <div style={style.logoContainer} position='left'> 
-                            <img style={style.logo} alt='logo' src={require('./vm-logo.png')} />
+                            <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                         </div>
                         <Menu.Item
                             name='About'

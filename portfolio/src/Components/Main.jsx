@@ -32,10 +32,10 @@ const style = {
 function Main() {
     return(
         <div style={style.titleContainer}>
-            <img style={style.title} className='background' alt='background' src={require('./background.png')} />
+            <img style={style.title} className='background' alt='background' src={require('./assets/background.png')} />
             <div className='name' style={style.title}>
                 <div>
-                    <img style={style.logo} alt='logo' src={require('./vm-logo.png')} />
+                    <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                 </div>
                 <div>Victor <b>Montoya</b></div>
                 <div style={style.job}>Software <b>Developer</b></div>

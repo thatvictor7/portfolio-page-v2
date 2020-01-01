@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import Main from './Components/Main'
 import Projects from './Components/Projects'
 import About from './Components/About'
+import BottomNav from './Components/BottomNav'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <About></About>
       <Projects></Projects>
       <ResponsiveLayout></ResponsiveLayout>
+      <BottomNav></BottomNav>
     </div>
   );
 }
