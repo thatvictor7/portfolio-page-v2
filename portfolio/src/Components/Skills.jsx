@@ -3,12 +3,13 @@ import { Grid, Segment, Divider, Header, Icon } from 'semantic-ui-react'
 
 const style = {
     skillsText: {
-        color: 'white',
+        color: 'rgba(23, 168, 158, 1)',
+        fontSize: '2rem',
     },
     stack: {
         margin: '3% 0'
     },
-    segment: {
+    segmentSkill: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -27,73 +28,85 @@ function Skills() {
         <div>
             <Divider horizontal>
                 <Header style={style.skillsText} as='h4'>
-                    <Icon name='file code' />
+                    {/* <Icon name='file code' /> */}
                     Skills:
                 </Header>
             </Divider>
-            <Grid style={style.stack} container columns={5} stackable>
+            <Grid style={style.stack} container columns={4} stackable>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
                         <Icon color='yellow' size='huge' name='js' />
                         JavaScript (ES6)
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
                         <Icon color='blue' size='huge' name='react' />
                         React.JS
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
                         <Icon color='blue' size='huge' name='react' />
                         React-Native
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
                         <Icon color='green' size='huge' name='node js' />
                         Node.JS
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
                         <Icon color='grey' size='huge' name='node js' />
                         Express.JS
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
                         <Icon color='teal' size='huge' name='database' />
                         SQL
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
-                    <Segment style={style.segment}>
+                    <Segment style={style.segmentSkill}>
+                        {/* <Icon color='orange' size='huge' name='database' /> */}
+                        <img style={style.logo} alt='knex.js' src={require('./assets/knex-logo.png')} />
+                        Knex.JS
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column>
+                    <Segment style={style.segmentSkill}>
                         {/* <Icon size='huge' name='database' /> */}
                         <img style={style.logo} alt='postgresql' src={require('./assets/posgresql-logo.png')} />
                         PostgreSQL
                     </Segment>
                 </Grid.Column>
-                <Grid.Column>
+                {/* <Grid.Column>
                     <Segment style={style.segment}>
                         <Icon color='red' size='huge' name='html5' />
                         HTML5
                     </Segment>
-                </Grid.Column>
-                <Grid.Column>
+                </Grid.Column> */}
+                {/* <Grid.Column>
                     <Segment style={style.segment}>
                         <Icon color='blue' size='huge' name='css3 alternate' />
                         CSS3
                     </Segment>
-                </Grid.Column>
-                <Grid.Column>
+                </Grid.Column> */}
+                {/* <Grid.Column>
                     <Segment style={style.segment}>
-                        {/* <Icon  size='huge' name='python' /> */}
                         <img style={style.logo} alt='python' src={require('./assets/python-logo.png')} />
                         Python
                     </Segment>
                 </Grid.Column>
+                <Grid.Column>
+                    <Segment style={style.segment}>
+                        <img style={style.logo} alt='java logo' src={require('./assets/java-logo.png')} />
+                        Java
+                    </Segment>
+                </Grid.Column> */}
             </Grid>
         </div>
     )

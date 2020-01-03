@@ -5,30 +5,36 @@ import '../App.css';
 const style = {
     bar: {
         borderRadius: 0,
+        // color: 'teal',
     },
     barContainer: {
-        borderRadius: 0,
+        borderBottom: 'none',
         position: 'fixed',
         width: '100%',
         top: '0',
-        zIndex: '100'
+        zIndex: '100',
+        backgroundColor: '#fff',
+        // color: 'black'
         // overflow: 'hidden'
     },
     selection: {
         borderRadius: 0,
-        color: 'red'
+        // color: 'red',
+        fontSize: '1.3rem',
         // backgroundColor: 'red',
+        color: 'black'
         // backgroundColor: 'linear-gradient(to right, #cc0000 0%, #00ff00 100%)'
         // backgroundImage: 'linear-gradient(to right,  red, yellow)'
     },
     logo: {
-        color: 'red',
+        // color: 'red',
         width: '2.8rem',
         alignSelf: 'center'
     },
     logoContainer: {
         textAlign: 'center',
-        margin: 'auto 0'
+        margin: 'auto 0',
+        backgroundColor: 'black',
         // alignSelf: 'center'
     }
 }
@@ -45,8 +51,8 @@ export default class Navbar extends Component {
 
         return (
             <div>
-                <Segment style={style.barContainer} inverted>
-                    <Menu size='large' style={style.bar} stackable inverted pointing secondary>
+                <Segment className='nav' style={style.barContainer} >
+                    <Menu color='teal' size='small' style={style.bar} stackable pointing secondary>
                         <div style={style.logoContainer} position='left'> 
                             <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                         </div>
@@ -56,7 +62,7 @@ export default class Navbar extends Component {
                             href={'#main'}
                             position='right'
                             style={style.selection}
-                            active={activeItem === 'main'}
+                            active={activeItem === 'Main'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
@@ -85,9 +91,9 @@ export default class Navbar extends Component {
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name='Resume'
+                            name='Contact'
                             // position='right'
-                            href={'#resume'}
+                            href={'#contact'}
                             style={style.selection}
                             active={activeItem === 'Resume'}
                             onClick={this.handleItemClick}

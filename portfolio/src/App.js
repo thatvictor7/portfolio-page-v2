@@ -7,15 +7,16 @@ import Main from './Components/Main'
 import Projects from './Components/Projects'
 import About from './Components/About'
 import BottomNav from './Components/BottomNav'
-import ResumeSection from './Components/ResumeSection'
+import Contact from './Components/Contact'
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       {/* <Main /> */}
+      {/* <div className='test'> test</div> */}
       <ScrollableAnchor id={'main'} >
-        <div>
+        <div className='main'>
           <Main />
         </div>
       </ScrollableAnchor>
@@ -35,9 +36,9 @@ function App() {
           <Skills />
         </div>
       </ScrollableAnchor>
-      <ScrollableAnchor id={'resume'}>
+      <ScrollableAnchor id={'contact'}>
         <div>
-          <ResumeSection />
+          <Contact />
         </div>
       </ScrollableAnchor>
       <BottomNav />
