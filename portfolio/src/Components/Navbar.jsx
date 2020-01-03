@@ -8,9 +8,10 @@ const style = {
     },
     barContainer: {
         borderRadius: 0,
-        // position: 'fixed',
-        // width: '100%',
-        // top: '0',
+        position: 'fixed',
+        width: '100%',
+        top: '0',
+        zIndex: '100'
         // overflow: 'hidden'
     },
     selection: {
@@ -50,8 +51,19 @@ export default class Navbar extends Component {
                             <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                         </div>
                         <Menu.Item
-                            name='About'
+                            name='Main'
+                            // link={'#section1'}
+                            href={'#main'}
                             position='right'
+                            style={style.selection}
+                            active={activeItem === 'main'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            name='About'
+                            // link={'#section1'}
+                            href={'#about'}
+                            // position='right'
                             style={style.selection}
                             active={activeItem === 'About'}
                             onClick={this.handleItemClick}
@@ -59,6 +71,7 @@ export default class Navbar extends Component {
                         <Menu.Item
                             name='Projects'
                             // position='right'
+                            href={'#projects'}
                             style={style.selection}
                             active={activeItem === 'Projects'}
                             onClick={this.handleItemClick}
@@ -66,6 +79,7 @@ export default class Navbar extends Component {
                         <Menu.Item
                             name='Skills'
                             // position='right'
+                            href={'#skills'}
                             style={style.selection}
                             active={activeItem === 'Skills'}
                             onClick={this.handleItemClick}
@@ -73,6 +87,7 @@ export default class Navbar extends Component {
                         <Menu.Item
                             name='Resume'
                             // position='right'
+                            href={'#resume'}
                             style={style.selection}
                             active={activeItem === 'Resume'}
                             onClick={this.handleItemClick}

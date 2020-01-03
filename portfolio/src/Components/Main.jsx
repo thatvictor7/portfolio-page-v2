@@ -3,22 +3,12 @@ import '../App.css';
 
 const style = {
     title: {
-        // color: 'white',
-        // backgroundColor: 'black',
-        // top: '10%',
-        // marginTop: '0',
         gridColumn: '1',
         gridRow: '1',
-        // top: '10%'
-
-        // position: 'absolute'
     },
-    // name: {
-    // //    top: '10%',
-    // },
     titleContainer: {
         display: 'grid',
-        // marginTop: '0'
+        // marginTop: '8%'
     },
     job: {
         paddingTop: '2.5vw'
@@ -37,7 +27,7 @@ function Main() {
                 <div>
                     <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                 </div>
-                <div>Victor <b>Montoya</b></div>
+                <div style={style.name}>Victor <b>Montoya</b></div>
                 <div style={style.job}>Software <b>Developer</b></div>
             </div>
         </div>

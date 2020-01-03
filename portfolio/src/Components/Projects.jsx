@@ -12,25 +12,22 @@ const style = {
         display: 'flex',
         alignContent: 'center',
         justifyContent: 'center',
-        height: 'auto'
+        height: 'auto',
+        backgroundColor: 'rgba(255, 255, 255, 1)',
         // margin: '1px 0'
+        // boxShadow: "5px 10px 15px #000",
     },
     gridContainer: {
-        // display: 'flex',
         marginTop: '3%',
         marginBottom: '3%',
     },
     segment: {
         display: 'flex',
-        // flexDirection: 'column',
         alignContent: 'center',
         justifyContent: 'center',
         height: '37em',
         backgroundColor: 'rgba(255, 255, 255, 0)',
     },
-    // image: {
-    //     height: '250px'
-    // }
 }
 
 const projects = [
@@ -92,9 +89,6 @@ function Projects() {
                     projects.map((p,i) => {
                         return <Grid.Column>
                             <Segment style={style.segment}>
-                                    {/* <img alt='test' src={require(p.image)} /> */}
-                                {/* {<img style={style.image} alt='test' src={p.image} />} */}
-                                    {/* <Image  /> */}
                                     <Card
                                         style={style.card}
                                         image={p.image}

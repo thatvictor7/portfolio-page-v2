@@ -4,10 +4,8 @@ import { Image, Divider, Header, Icon } from 'semantic-ui-react'
 const style = {
     aboutDivider: {
         color: 'white',
-        // marginTop: '3%'
     },
     imageTextContainer: {
-        // display: 'inline-block',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

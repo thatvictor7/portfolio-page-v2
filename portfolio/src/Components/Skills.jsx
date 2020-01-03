@@ -4,7 +4,6 @@ import { Grid, Segment, Divider, Header, Icon } from 'semantic-ui-react'
 const style = {
     skillsText: {
         color: 'white',
-        // backgroundColor: 'red'
     },
     stack: {
         margin: '3% 0'
@@ -23,7 +22,7 @@ const style = {
     }
 }
 
-function ResponsiveLayout() {
+function Skills() {
     return (
         <div>
             <Divider horizontal>
@@ -36,7 +35,7 @@ function ResponsiveLayout() {
                 <Grid.Column>
                     <Segment style={style.segment}>
                         <Icon color='yellow' size='huge' name='js' />
-                        JavaScript
+                        JavaScript (ES6)
                     </Segment>
                 </Grid.Column>
                 <Grid.Column>
@@ -100,4 +99,4 @@ function ResponsiveLayout() {
     )
 }
 
-export default ResponsiveLayout
+export default Skills
