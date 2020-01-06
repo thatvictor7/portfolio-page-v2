@@ -7,7 +7,7 @@ const style = {
         fontSize: '2rem',
     },
     stack: {
-        margin: '3% 0'
+        margin: '2% 0 5% 0'
     },
     segmentSkill: {
         display: 'flex',
@@ -20,6 +20,11 @@ const style = {
     logo: {
         height: '56px',
         margin: 'auto',
+    },
+    skillDescription: {
+        marginTop: '6%',
+        color: 'rgba(31,31,31,.9)',
+        fontSize: '1.3rem'
     }
 }
 
@@ -28,10 +33,10 @@ function Skills() {
         <div>
             <Divider horizontal>
                 <Header style={style.skillsText} as='h4'>
-                    {/* <Icon name='file code' /> */}
                     Skills:
                 </Header>
             </Divider>
+            <p style={style.skillDescription}>What I do:</p>
             <Grid style={style.stack} container columns={4} stackable>
                 <Grid.Column>
                     <Segment style={style.segmentSkill}>

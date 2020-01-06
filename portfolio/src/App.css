@@ -32,18 +32,12 @@ div.title {
   color: rgba(23, 168, 158, 1) !important;
 }
 
-/* .form-field {
-    height: 100%;
-} */
-.ui.form input[type=text] {
-  /* height: 50px;
-  width: 100%; */
-  /* display: inline-block !important;
-  text-align: start !important;
-  text-rendering: auto !important;
-  flex-direction: column !important;
-  overflow-wrap: break-word !important;
-  white-space: pre-wrap !important; */
+.ui.card>.content {
+  min-height: 140px;
+}
+
+.contact-descripion {
+  font-size: 1.3rem !important;
 }
 
 .background {
@@ -61,16 +55,6 @@ div.title {
   /* font-size: 5vw; */
   color: white;
 }
-
-/* .nav-selector {
-  background-color: blue;
-} */
-
-/* .test {
-    margin: 0 auto;
-    width: 80%;
-    height: 70%;
-} */
 
 @media only screen and (max-width: 767px) {
   /* .main {
@@ -94,41 +78,4 @@ div.title {
   .nav {
     position: relative !important;
   }
-}
-
-@media only screen and (max-width: 590px) {
-  .main {
-    /* margin-top: 45%; */
-    /* height: 50%; */
-  }
-    /* .test {
-      margin: 0 auto 15%;
-      width: 80%;
-      height: 70%;
-      object-fit: scale-down;
-    } */
-}
-
-@media only screen and (max-width: 490px) {
-  .main {
-    /* margin-top: 55%; */
-  }
-    /* .test {
-      margin: 0 auto 20%;
-      width: 80%;
-      height: 70%;
-      
-    } */
-}
-
-@media only screen and (max-width: 390px) {
-  /* .main {
-    margin-top: 65%;
-  }
-
-  .test {
-    margin: 0 auto 25%;
-    width: 80%;
-    height: 90%;
-  } */
 }

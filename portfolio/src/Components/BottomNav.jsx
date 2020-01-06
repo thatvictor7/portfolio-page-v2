@@ -17,18 +17,18 @@ function BottomNav() {
                 2020 Victor Montoya
                 </div>
             <Menu.Item>
-                <a href='https://github.com/thatvictor7'>
+                <a href='https://github.com/thatvictor7' target="_blank">
                     <Icon size='large' color='black' name='github' />
                 </a>
             </Menu.Item>
             <Menu.Item>
-                <a href='https://www.linkedin.com/in/victor-montoya/'>
+                <a href='https://www.linkedin.com/in/victor-montoya/' target="_blank">
                     <Icon size='large' 
                         color='black' name='linkedin' />
                 </a>
             </Menu.Item>
             <Menu.Item>
-                <a href='mailto:montoya.victor7@gmail.com' >
+                <a href='mailto:montoya.victor7@gmail.com' target="_blank" >
                     <Icon size='large' color='black' name='mail' />
                 </a>
             </Menu.Item>

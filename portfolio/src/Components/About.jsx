@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Divider, Header, Icon, Segment } from 'semantic-ui-react'
+import { Image, Divider, Header } from 'semantic-ui-react'
 
 const style = {
     aboutDivider: {
@@ -13,20 +13,23 @@ const style = {
     },
     aboutContainer: {
         textAlign: 'center',
-        marginTop: '3%'
+        marginTop: '5%'
     },
     aboutText: {
         color: 'rrba(1,1,1,1)',
-        margin: '3% 20%'
+        margin: '5% 20%'
     },
     image: {
         objectFit: 'cover', 
         width: '25vw',
         borderRadius: '5%',
+        // border: '0',
         alignSelf: 'center',
+        // 0 2px 4px 0 rgba(34, 36, 38, .12)
+        boxShadow: '0 2px 4px 0 rgba(34, 36, 38, .22)',
     },
     dividerContainer: {
-        marginTop: '3%'
+        marginTop: '5%'
     }
 }
 
@@ -35,7 +38,6 @@ function About() {
         <div>
             <Divider style={style.dividerContainer} horizontal>
                 <Header style={style.aboutDivider} as='h4'>
-                    {/* <Icon name='user' /> */}
                     About Me:
                 </Header>
             </Divider>

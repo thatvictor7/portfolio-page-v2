@@ -3,10 +3,6 @@ import { Menu, Segment } from 'semantic-ui-react'
 import '../App.css';
 
 const style = {
-    bar: {
-        borderRadius: 0,
-        // color: 'teal',
-    },
     barContainer: {
         borderBottom: 'none',
         position: 'fixed',
@@ -14,27 +10,21 @@ const style = {
         top: '0',
         zIndex: '100',
         backgroundColor: '#fff',
-        // color: 'black'
-        // overflow: 'hidden'
     },
     selection: {
         borderRadius: 0,
-        // color: 'red',
-        fontSize: '1.3rem',
-        // backgroundColor: 'red',
+        fontSize: '1.18rem',
         color: 'black'
         // backgroundColor: 'linear-gradient(to right, #cc0000 0%, #00ff00 100%)'
-        // backgroundImage: 'linear-gradient(to right,  red, yellow)'
     },
     logo: {
-        // color: 'red',
-        width: '2.8rem',
+        width: '2.7rem',
         alignSelf: 'center'
     },
     logoContainer: {
         textAlign: 'center',
         margin: 'auto 0',
-        backgroundColor: 'black',
+        // backgroundColor: 'black',
         // alignSelf: 'center'
     }
 }
@@ -46,19 +36,17 @@ export default class Navbar extends Component {
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
     render() {
-        // const { activeB, selectedB } = this.state
         const { activeItem } = this.state
 
         return (
             <div>
                 <Segment className='nav' style={style.barContainer} >
-                    <Menu color='teal' size='small' style={style.bar} stackable pointing secondary>
+                    <Menu color='teal' size='mini' stackable pointing secondary>
                         <div style={style.logoContainer} position='left'> 
-                            <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
+                            <img style={style.logo} alt='logo' src={require('./assets/black-vm-logo.png')} />
                         </div>
                         <Menu.Item
                             name='Main'
-                            // link={'#section1'}
                             href={'#main'}
                             position='right'
                             style={style.selection}
@@ -67,7 +55,6 @@ export default class Navbar extends Component {
                         />
                         <Menu.Item
                             name='About'
-                            // link={'#section1'}
                             href={'#about'}
                             // position='right'
                             style={style.selection}
@@ -76,7 +63,6 @@ export default class Navbar extends Component {
                         />
                         <Menu.Item
                             name='Projects'
-                            // position='right'
                             href={'#projects'}
                             style={style.selection}
                             active={activeItem === 'Projects'}
