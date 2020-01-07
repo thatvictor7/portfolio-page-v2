@@ -5,11 +5,13 @@ import axios from 'axios';
 
 const style = {
     dividerContainer: {
-        // marginTop: '3%',
+        paddingLeft: '5%'
     },
     contactDivider: {
         color: 'rgba(23, 168, 158, 1)',
-        fontSize: '2rem',
+        fontSize: '3.0rem',
+        fontWeight: '700',
+        textAlign: 'left',
     },
     resume: {
         display: 'inline-block',
@@ -17,7 +19,7 @@ const style = {
         marginBottom: '8%',
     },
     fullContainer: {
-        marginTop: '5%',
+        margin: '7% 0',
         textAlign: 'center'
     },
     modalHeader: {
@@ -54,9 +56,9 @@ export default class Contact extends Component {
 
         return (
             <div style={style.fullContainer}>
-                <Divider style={style.dividerContainer} horizontal>
+                <Divider hidden style={style.dividerContainer} horizontal>
                     <Header style={style.contactDivider} as='h4'>
-                        Contact:
+                        Contact<b style={{ letterSpacing: '-8px' }}>___</b>
                     </Header>
                 </Divider>
 
@@ -76,7 +78,7 @@ export default class Contact extends Component {
 
                     <Grid.Column>
                         <Form style={style.contactForm} onSubmit={this.handleSubmit.bind(this)} method="POST">
-                        <p className='contact-descripion'>Interested in working together? Fill out the form below and lets have a talk.</p>
+                        <p className='contact-descripion'>Interested in working together? Fill out the form below and let's have a chat.</p>
                             <Form.Field required>
                                 <label style={style.field}>Name</label>
                                 <input type='text' onChange={this.handleName} value={this.state.name} placeholder='Name' id="name"/>

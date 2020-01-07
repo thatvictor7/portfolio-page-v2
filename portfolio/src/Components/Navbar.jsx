@@ -14,7 +14,8 @@ const style = {
     selection: {
         borderRadius: 0,
         fontSize: '1.18rem',
-        color: 'black'
+        fontWeight: '700',
+        color: 'rgba(41,41,41,.9)'
         // backgroundColor: 'linear-gradient(to right, #cc0000 0%, #00ff00 100%)'
     },
     logo: {

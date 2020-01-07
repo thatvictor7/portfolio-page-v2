@@ -12,23 +12,25 @@ const style = {
     },
     description: {
         paddingTop: '2.5vw',
-        fontSize: '1.8rem',
+        marginTop: '4%',
+        fontSize: '3.8rem',
         width: '50%',
         // marginTop: '3%',
         // marginLeft: '2%',
         textAlign: 'left',
-        lineHeight: '1.8rem'
+        lineHeight: '4.2rem',
+        // fontWeight: '700',
     },
     name: {
-        fontSize: '5.8rem',
-        marginTop: '3%',
-        marginBottom: '2%',
+        fontSize: '7.8rem',
+        marginTop: '4%',
+        marginBottom: '1%',
         // marginLeft: '4%',
         textAlign: 'left',
     },
     logo: {
         width: '15vw',
-        // marginBottom: '1vh',
+        marginBottom: '1%',
     }
 }
 
@@ -41,7 +43,7 @@ function Main() {
                     <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                 </div>
                 <div className='name-container' style={style.name}>victor<b>m.io</b></div>
-                <div className='description-container' style={style.description}>Hello, my name is Victor Montoya and I'm a Denver, CO based software developer.</div>
+                <div className='description-container' style={style.description}>Hello and welcome to my homepage!</div>
             </div>
         </div>
     )

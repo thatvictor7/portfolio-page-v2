@@ -4,10 +4,16 @@ import { Grid, Segment, Divider, Header, Icon } from 'semantic-ui-react'
 const style = {
     skillsText: {
         color: 'rgba(23, 168, 158, 1)',
-        fontSize: '2rem',
+        fontSize: '3.0rem',
+        fontWeight: '700',
+        // textAlign: 'left',
     },
     stack: {
         margin: '2% 0 5% 0'
+    },
+    dividerContainer: {
+        // marginTop: '15%',
+        paddingLeft: '5%'
     },
     segmentSkill: {
         display: 'flex',
@@ -24,19 +30,24 @@ const style = {
     skillDescription: {
         marginTop: '6%',
         color: 'rgba(31,31,31,.9)',
-        fontSize: '1.3rem'
-    }
+        fontSize: '1.8rem',
+        display: 'inline-block',
+        width: '60%',
+        // textAlign: 'left',
+    },
 }
 
 function Skills() {
     return (
         <div>
-            <Divider horizontal>
+            <Divider style={style.dividerContainer} hidden horizontal>
                 <Header style={style.skillsText} as='h4'>
-                    Skills:
+                    Skills<b style={{ letterSpacing: '-8px', color: '' }}>___</b>
                 </Header>
             </Divider>
-            <p style={style.skillDescription}>What I do:</p>
+            {/* <div style={style.skillDescriptionContainer}> */}
+                <p style={style.skillDescription}>I develop high quality and responsive websites and applications. Here are some of the technologies I have worked on recently.</p>
+            {/* </div> */}
             <Grid style={style.stack} container columns={4} stackable>
                 <Grid.Column>
                     <Segment style={style.segmentSkill}>

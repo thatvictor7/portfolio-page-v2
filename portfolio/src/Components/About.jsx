@@ -4,7 +4,9 @@ import { Image, Divider, Header } from 'semantic-ui-react'
 const style = {
     aboutDivider: {
         color: 'rgba(23, 168, 158, 1)',
-        fontSize: '2rem',
+        fontSize: '3.8rem',
+        // fontWeight: '700',
+        textAlign: 'left',
     },
     imageTextContainer: {
         display: 'flex',
@@ -17,7 +19,9 @@ const style = {
     },
     aboutText: {
         color: 'rrba(1,1,1,1)',
-        margin: '5% 20%'
+        margin: '5% 20%',
+        fontSize: '1.8rem',
+        textAlign: 'left'
     },
     image: {
         objectFit: 'cover', 
@@ -29,25 +33,35 @@ const style = {
         boxShadow: '0 2px 4px 0 rgba(34, 36, 38, .22)',
     },
     dividerContainer: {
-        marginTop: '5%'
+        marginTop: '5%',
+        paddingLeft: '5%',
+        // fontFamily: 'Raleway'
+    },
+    nameText: {
+        margin: '0',
+
+    },
+    lastName: {
+        margin: '0',
+        fontWeight: '800',
     }
 }
 
 function About() {
     return(
         <div>
-            <Divider style={style.dividerContainer} horizontal>
+            <Divider hidden style={style.dividerContainer} horizontal>
                 <Header style={style.aboutDivider} as='h4'>
-                    About Me:
+                    <div>
+                        <div style={style.nameText}>Victor<b style={{ letterSpacing: '-8px' }}>---</b></div>
+                        <div style={style.lastName}>Montoya</div>
+                    </div>
                 </Header>
             </Divider>
             <div style={style.aboutContainer} >
                 <div style={style.imageTextContainer}>
                     <Image bordered style={style.image} src={require('./assets/profile-pic.jpg')} size='small' />
-                    {/* <Segment> */}
-
-                    <p style={style.aboutText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque iaculis ante, et ornare dolor vestibulum vitae. Vestibulum placerat malesuada sagittis. Vivamus ac fermentum sapien. Mauris sit amet ipsum ultrices, pellentesque purus in, suscipit lectus. Morbi sagittis lorem ac nisl suscipit tincidunt. Pellentesque vehicula ut metus id lobortis. Etiam id augue felis. Integer aliquam ornare bibendum.</p>
-                    {/* </Segment> */}
+                    <p style={style.aboutText}>Hello, my name is Victor Montoya and I'm a Denver, CO based software developer.  I enjoy creating beautiful , easy to use and effective products. If you are looking for someone to design and develop an idea of yours, I can help you. </p>
                 </div>
             </div>
         </div>

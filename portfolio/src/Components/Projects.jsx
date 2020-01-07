@@ -4,7 +4,13 @@ import { Grid, Divider, Header, Icon, Card, Button, Accordion } from 'semantic-u
 const style = {
     skillsText: {
         color: 'rgba(23, 168, 158, 1)',
-        fontSize: '2rem',
+        fontSize: '3.0rem',
+        fontWeight: '700',
+        textAlign: 'left',
+    },
+    dividerContainer: {
+        // marginTop: '5%',
+        paddingLeft: '5%'
     },
     card: {
         display: 'flex',
@@ -102,9 +108,9 @@ export default class Projects extends Component {
         const { activeIndex } = this.state
         return (
             <div>
-                <Divider horizontal>
+                <Divider style={style.dividerContainer} hidden horizontal>
                     <Header style={style.skillsText} as='h4'>
-                        Projects:
+                        Projects<b style={{letterSpacing: '-8px'}}>___</b>
                     </Header>
                 </Divider>
                 <Grid style={style.gridContainer} container columns={3} stackable>
@@ -116,7 +122,6 @@ export default class Projects extends Component {
                                 image={p.image}
                                 header={p.name}
                                 meta={p.tech}
-                                // extra={p.tech}
                                 description={
                                     <Accordion>
                                         <Accordion.Title
@@ -129,13 +134,13 @@ export default class Projects extends Component {
                                         <Accordion.Content active={activeIndex === i}>
                                             <p>{p.description}</p>
                                             {/* <text>{p.description}</text> */}
-                                            <a href={p.github} target="_blank">
+                                            <a href={p.github} rel="noopener noreferrer" target="_blank">
                                                 <Button>
                                                     <Icon name='github' />
                                                     Github
                                                     </Button>
                                             </a>
-                                            {p.website ? <a target="_blank" href={p.website}>
+                                            {p.website ? <a target="_blank" rel="noopener noreferrer" href={p.website}>
                                                 <Button color='teal'>
                                                     <Icon name='external' />
                                                     Visit Website
