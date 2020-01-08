@@ -52,6 +52,9 @@ const style = {
         bottom: '.5%',
         zIndex: '1',
         width: '100%'
+    }, 
+    formDescription: {
+        fontSize: '1.6rem',
     }
 }
 

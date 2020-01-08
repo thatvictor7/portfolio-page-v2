@@ -42,7 +42,7 @@ function Main() {
                 <div>
                     <img style={style.logo} alt='logo' src={require('./assets/vm-logo.png')} />
                 </div>
-                <div className='name-container' style={style.name}>victor<b>m.io</b></div>
+                <div className='name-container' style={style.name}>victor<b>m.co</b></div>
                 <div className='description-container' style={style.description}>Hello and welcome to my homepage!</div>
             </div>
         </div>
