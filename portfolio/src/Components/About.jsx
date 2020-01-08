@@ -25,9 +25,8 @@ const style = {
     },
     image: {
         objectFit: 'cover', 
-        width: '25vw',
+        width: '35%',
         borderRadius: '5%',
-        // border: '0',
         alignSelf: 'center',
         // 0 2px 4px 0 rgba(34, 36, 38, .12)
         boxShadow: '0 2px 4px 0 rgba(34, 36, 38, .22)',
@@ -60,7 +59,7 @@ function About() {
             </Divider>
             <div style={style.aboutContainer} >
                 <div style={style.imageTextContainer}>
-                    <Image bordered style={style.image} src={require('./assets/profile-pic.jpg')} size='small' />
+                    <Image bordered className='profile-image' style={style.image} src={require('./assets/profile-pic.jpg')} size='small' />
                     <p style={style.aboutText}>Hello, my name is Victor Montoya and I'm a Denver, CO based software developer.  I enjoy creating beautiful , easy to use and effective products. If you are looking for someone to design and develop an idea of yours, I can help you. </p>
                 </div>
             </div>

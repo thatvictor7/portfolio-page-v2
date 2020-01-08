@@ -58,7 +58,7 @@ const projects = [
     {
         name: 'Bank API',
         tech: [`Node.JS /`, ` Express.JS ${"\n"}`],
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque iaculis ante, et ornare dolor vestibulum vitae. Vestibulum placerat malesuada sagittis.`,
+        description: `API that holds user data and transactions.`,
         github: 'https://github.com/thatvictor7/Bank-API',
         image: require('./assets/bank-api.png'),
         website: '',
@@ -133,7 +133,6 @@ export default class Projects extends Component {
                                             </Accordion.Title>
                                         <Accordion.Content active={activeIndex === i}>
                                             <p>{p.description}</p>
-                                            {/* <text>{p.description}</text> */}
                                             <a href={p.github} rel="noopener noreferrer" target="_blank">
                                                 <Button>
                                                     <Icon name='github' />

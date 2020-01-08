@@ -1,5 +1,17 @@
 import React, { Component } from 'react'
-import { Divider, Icon, Header, Image, Modal, Segment, Label, Grid, Form, Button, TransitionablePortal } from 'semantic-ui-react'
+import {
+    Divider,
+    Icon,
+    Header,
+    Image,
+    Modal,
+    Segment,
+    Label,
+    Grid,
+    Form,
+    Button,
+    Message
+} from 'semantic-ui-react'
 import axios from 'axios';
 
 
@@ -34,6 +46,15 @@ const style = {
     },
     field: {
         color: 'rgba(31, 41, 41, 0.927)'
+    },
+    message: {
+        position: 'absolute',
+        bottom: '.5%',
+        zIndex: '1',
+        width: '100%'
+    },
+    formDescription: {
+        fontSize: '1.6rem'
     }
 }
 
@@ -47,14 +68,14 @@ export default class Contact extends Component {
             message: '',
             buttonColor: '',
             fontColor: '',
-            open: false
+            sent: false
         }
     }
 
     render() {
 
         const isEnabled = this.state.message.length > 0 && this.state.name.length > 0 && this.state.email.length > 0 ? true : false
-        const { open, name, email } = this.state
+        const { sent, name, email } = this.state
 
         return (
             <div style={style.fullContainer}>
@@ -79,37 +100,28 @@ export default class Contact extends Component {
                     </Grid.Column>
 
                     <Grid.Column>
-                        <Form style={style.contactForm} onSubmit={this.handleSubmit} method="POST">
-                        <p className='contact-descripion'>Interested in working together? Fill out the form below and let's have a chat.</p>
+                        <Form style={style.contactForm} onSubmit={this.handleSubmit} method="POST" success={sent}>
+                            <p style={style.formDescription}>Interested in working together? Fill out the form below and let's have a chat.</p>
                             <Form.Field required>
-                                {/* <label style={style.field}>Name</label>
-                                <input name='name' type='text' onChange={this.handleName} value={name} placeholder='Name'/> */}
-                                <Form.Input
-                                    placeholder='Name'
-                                    name='name'
-                                    value={name}
-                                    type='text'
-                                    onChange={this.handleName}
-                                />
+                                <label style={style.field}>Name</label>
+                                <input name='name' type='text' onChange={this.handleName} value={name} placeholder='Name' />
                             </Form.Field>
                             <Form.Field required>
                                 <label value={this.state.email} style={style.field}>Email</label>
-                                <input onChange={this.handleEmail} type='email' value={email} placeholder='example@email.com' aria-describedby="emailHelp"/>
+                                <input onChange={this.handleEmail} type='email' value={email} placeholder='example@email.com' aria-describedby="emailHelp" />
                             </Form.Field>
                             <Form.Field required className='form-field'>
                                 <label style={style.field}>Message</label>
-                                <textarea onChange={this.handleMessage} value={this.state.message} cols="50" rows="10" id='message'/>
+                                <textarea onChange={this.handleMessage} value={this.state.message} cols="50" rows="10" />
                             </Form.Field>
-                            <Button onClick={this.handleButtonStyle} style={{backgroundColor: this.state.buttonColor, color: this.state.fontColor}} disabled={!isEnabled} content='submit' type='Submit'>Submit</Button>
-                            <TransitionablePortal onClose={this.handleClose} open={open}>
-                                <Segment
-                                    style={{ left: '40%', position: 'fixed', top: '50%', zIndex: 1000 }}
-                                >
-                                    <Header>This is a controlled portal</Header>
-                                    <p>Portals have tons of great callback functions to hook into.</p>
-                                    <p>To close, simply click the close button or click away</p>
-                                </Segment>
-                            </TransitionablePortal>
+                            <Message
+                                success
+                                color='teal'
+                                style={style.message}
+                                header='Your form was succesfully submited'
+                                content='I will be getting in touch soon!'
+                            />
+                            <Button onClick={this.handleButtonStyle} style={{ backgroundColor: this.state.buttonColor, color: this.state.fontColor }} disabled={!isEnabled} content='submit' type='Submit'>Submit</Button>
                         </Form>
                     </Grid.Column>
                 </Grid>
@@ -119,13 +131,8 @@ export default class Contact extends Component {
 
     handleClose = () => this.setState({ open: false })
 
-    handlePortal = () => {
-        this.setState({ open: true})
-    }
-
     handleEmail = (e) => {
         this.setState({ email: e.target.value })
-        // console.log(this.state);
         this.handleButtonStyle()
     }
 
@@ -149,34 +156,24 @@ export default class Contact extends Component {
         e.preventDefault();
         axios({
             method: "POST",
-            // url: "https://portfolio-contact-nodemail.appspot.com/send",
-            url: "http://localhost:8080/send",
+            url: "https://portfolio-contact-nodemail.appspot.com/send",
+            // url: "http://localhost:8080/send",
             data: {
-                // name: name,
-                // email: email,
-                // message: message
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
             }
         }).then((response) => {
-            if (response.data.msg === 'success') {
+            if (response.data.status === 'success') {
                 console.log("Message Sent.");
                 this.resetForm()
-                // e.target.reset()
-                // this.handlePortal()
-            } else if (response.data.msg === 'fail') {
+            } else if (response.data.status === 'fail') {
                 alert("Message failed to send.")
             }
         })
     }
 
     resetForm = () => {
-        this.setState({ name: '', email: '', message: '' })
+        this.setState({ name: '', email: '', message: '', sent: true })
     }
-
-    // resetForm() {
-
-    //     this.setState({ name: '', email: '', message: '' })
-    // }
 }
