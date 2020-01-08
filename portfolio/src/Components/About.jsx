@@ -12,6 +12,8 @@ const style = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+
+        // textAlign: 'center'
     },
     aboutContainer: {
         textAlign: 'center',
@@ -21,7 +23,7 @@ const style = {
         color: 'rrba(1,1,1,1)',
         margin: '5% 20%',
         fontSize: '1.8rem',
-        textAlign: 'left'
+        textAlign: 'left',
     },
     image: {
         objectFit: 'cover', 
@@ -61,7 +63,7 @@ function About() {
             <div style={style.aboutContainer} >
                 <div style={style.imageTextContainer}>
                     <Image bordered style={style.image} src={require('./assets/profile-pic.jpg')} size='small' />
-                    <p style={style.aboutText}>Hello, my name is Victor Montoya and I'm a Denver, CO based software developer.  I enjoy creating beautiful , easy to use and effective products. If you are looking for someone to design and develop an idea of yours, I can help you. </p>
+                    <p className='about-text' style={style.aboutText}>Hello, my name is Victor Montoya and I'm a Denver, CO based software developer.  I enjoy creating beautiful , easy to use and effective products. If you are looking for someone to design and develop an idea of yours, I can help you. </p>
                 </div>
             </div>
         </div>

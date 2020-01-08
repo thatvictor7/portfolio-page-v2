@@ -64,14 +64,6 @@ div.title {
 }
 
 @media only screen and (max-width: 767px) {
-  /* .main {
-    margin-top: 35%;
-  } */
-  /* .test {
-    margin: 0 auto 15%;
-    width: 80%;
-    height: 70%;
-  } */
   .background {
     height: 50vh;
   }
@@ -87,5 +79,14 @@ div.title {
   }
   .nav {
     position: relative !important;
+  }
+
+  .about-text {
+    margin: 5% 4.5% !important;
+    /* width: 90%; */
+  }
+
+  .skill-description {
+    width: 90% !important;
   }
 }
