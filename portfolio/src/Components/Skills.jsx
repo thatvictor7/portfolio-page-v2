@@ -6,13 +6,11 @@ const style = {
         color: 'rgba(23, 168, 158, 1)',
         fontSize: '3.0rem',
         fontWeight: '700',
-        // textAlign: 'left',
     },
     stack: {
         margin: '2% 0 5% 0'
     },
     dividerContainer: {
-        // marginTop: '15%',
         paddingLeft: '5%'
     },
     segmentSkill: {
@@ -33,7 +31,6 @@ const style = {
         fontSize: '1.8rem',
         display: 'inline-block',
         width: '60%',
-        // textAlign: 'left',
     },
 }
 
@@ -45,9 +42,7 @@ function Skills() {
                     Skills<b style={{ letterSpacing: '-8px', color: '' }}>___</b>
                 </Header>
             </Divider>
-            {/* <div style={style.skillDescriptionContainer}> */}
-                <p style={style.skillDescription}>I develop high quality and responsive websites and applications. Here are some of the technologies I have worked on recently.</p>
-            {/* </div> */}
+                <p className='skill-description' style={style.skillDescription}>I develop high quality and responsive websites and applications. Here are some of the technologies I have worked on recently.</p>
             <Grid style={style.stack} container columns={4} stackable>
                 <Grid.Column>
                     <Segment style={style.segmentSkill}>

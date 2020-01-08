@@ -12,6 +12,8 @@ const style = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+
+        // textAlign: 'center'
     },
     aboutContainer: {
         textAlign: 'center',
@@ -21,7 +23,7 @@ const style = {
         color: 'rrba(1,1,1,1)',
         margin: '5% 20%',
         fontSize: '1.8rem',
-        textAlign: 'left'
+        textAlign: 'left',
     },
     image: {
         objectFit: 'cover', 
