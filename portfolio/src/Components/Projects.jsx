@@ -56,6 +56,22 @@ const projects = [
         website: 'https://play.google.com/store/apps/details?id=com.victory.yourloancalculator',
     },
     {
+        name: 'Inbox',
+        tech: ['React.JS /', ' CSS'],
+        description: 'Gmail clone app. It allows you to add, delete, star, and label messages.',
+        github: 'Gmail clone app. It allows you to add, delete, star, and label messages.',
+        image: require('./assets/inbox.png'),
+        website: '',
+    },
+    {
+        name: 'Notesy',
+        tech: ['React.JS /', ' Material UI /', ' Node.JS /', ' Knex.JS /', ' PostgreSQL /', ' Axios'],
+        description: 'Responsive web app, allows you have an account, create, update, view existing notes by sending request to server. API server created with Node.JS, Knex.JS and PostgreSQL.',
+        github: 'https://github.com/thatvictor7/NotesAppReact',
+        image: require('./assets/notesy.png'),
+        website: '',
+    },
+    {
         name: 'Bank API',
         tech: [`Node.JS /`, ` Express.JS ${"\n"}`],
         description: `API that holds user data and transactions.`,
@@ -70,22 +86,6 @@ const projects = [
         github: 'https://github.com/thatvictor7/angular-issues',
         image: require('./assets/angularIssues.png'),
         website: 'https://condemned-good-bye.surge.sh/',
-    },
-    {
-        name: 'Inbox',
-        tech: ['React.JS /', ' CSS'],
-        description: 'Gmail clone app. It allows you to add, delete, star, and label messages.',
-        github: 'Gmail clone app. It allows you to add, delete, star, and label messages.',
-        image: require('./assets/inbox.png'),
-        website: '',
-    },
-    {
-        name: 'Reads',
-        tech: ['React.JS /', ' Material UI /', ' API Integration'],
-        description: 'Gmail clone app. It allows you to add, delete, star, and label messages.',
-        github: 'https://github.com/thatvictor7/gReads-2.0',
-        image: require('./assets/reads.png'),
-        website: '',
     },
 ]
 

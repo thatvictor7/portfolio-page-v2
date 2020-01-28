@@ -12,7 +12,7 @@ import {
     Button,
     Message
 } from 'semantic-ui-react'
-import axios from 'axios';
+import axios from 'axios'
 
 
 const style = {
@@ -100,7 +100,7 @@ export default class Contact extends Component {
                     </Grid.Column>
 
                     <Grid.Column>
-                        <Form style={style.contactForm} onSubmit={this.handleSubmit} method="POST" success={sent}>
+                        <Form style={style.contactForm} onSubmit={this.handleSubmit} method="GET" success={sent}>
                             <p style={style.formDescription}>Interested in working together? Fill out the form below and let's have a chat.</p>
                             <Form.Field required>
                                 <label style={style.field}>Name</label>
@@ -153,7 +153,7 @@ export default class Contact extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         axios({
             method: "POST",
             url: "https://portfolio-contact-nodemail.appspot.com/send",

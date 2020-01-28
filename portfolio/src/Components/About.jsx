@@ -12,7 +12,6 @@ const style = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-
         // textAlign: 'center'
     },
     aboutContainer: {
