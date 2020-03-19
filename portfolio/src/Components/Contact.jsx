@@ -17,7 +17,7 @@ import axios from 'axios'
 
 const style = {
     dividerContainer: {
-        paddingLeft: '5%'
+        // paddingLeft: '5%'
     },
     contactDivider: {
         color: 'rgba(23, 168, 158, 1)',
@@ -79,9 +79,9 @@ export default class Contact extends Component {
 
         return (
             <div style={style.fullContainer}>
-                <Divider hidden style={style.dividerContainer} horizontal>
+                <Divider style={style.dividerContainer} horizontal>
                     <Header style={style.contactDivider} as='h4'>
-                        Contact<b style={{ letterSpacing: '-8px' }}>___</b>
+                        Contact
                     </Header>
                 </Divider>
 
@@ -89,10 +89,10 @@ export default class Contact extends Component {
                     <Grid.Column >
                         <div style={style.resume}>
                             <Segment>
-                                <Modal trigger={<div> <Label attached='top'><Icon name='zoom-in' />Click resume to enlarge</Label> <Image size='medium' fluid alt='resume' src={require('./assets/vm_resume-sd.png')} /></div>}>
+                                <Modal trigger={<div> <Label attached='top'><Icon name='zoom-in' />Click resume to enlarge</Label> <Image size='medium' fluid alt='resume' src={require('./assets/vg_resume-sd.jpg')} /></div>}>
                                     <Modal.Header style={style.modalHeader}>Resumé</Modal.Header>
                                     <Modal.Content>
-                                        <Image size="huge" alt='resume' src={require('./assets/vm_resume-sd.png')} />
+                                        <Image size="huge" alt='resume' src={require('./assets/vg_resume-sd.jpg')} />
                                     </Modal.Content>
                                 </Modal>
                             </Segment>

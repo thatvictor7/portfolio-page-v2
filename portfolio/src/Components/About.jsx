@@ -39,7 +39,6 @@ const style = {
     },
     nameText: {
         margin: '0',
-
     },
     lastName: {
         margin: '0',
@@ -50,18 +49,19 @@ const style = {
 function About() {
     return(
         <div>
-            <Divider hidden style={style.dividerContainer} horizontal>
+            <Divider style={style.dividerContainer} horizontal>
                 <Header style={style.aboutDivider} as='h4'>
                     <div>
-                        <div style={style.nameText}>Victor<b style={{ letterSpacing: '-8px' }}>---</b></div>
-                        <div style={style.lastName}>Montoya</div>
+                        {/* <div style={style.nameText}>Victor<b style={{ letterSpacing: '-8px' }}>---</b></div> */}
+                        <div style={style.nameText}>Victor</div>
+                        {/* <div style={style.lastName}>Montoya</div> */}
                     </div>
                 </Header>
             </Divider>
             <div style={style.aboutContainer} >
                 <div style={style.imageTextContainer}>
                     <Image bordered className='profile-image' style={style.image} src={require('./assets/profile-pic.jpg')} size='small' />
-                    <p style={style.aboutText}>Hello, my name is Victor Montoya and I'm a Denver, CO based software developer.  I enjoy creating beautiful , easy to use and effective products. If you are looking for someone to design and develop an idea of yours, I can help you. </p>
+                    <p style={style.aboutText}>Hello, my name is Victor and I'm a Denver, CO based software developer.  I enjoy creating beautiful , easy to use and effective products. If you are looking for someone to design and develop an idea of yours, I can help you. </p>
                 </div>
             </div>
         </div>

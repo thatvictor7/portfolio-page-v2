@@ -10,7 +10,7 @@ const style = {
     },
     dividerContainer: {
         // marginTop: '5%',
-        paddingLeft: '5%'
+        // paddingLeft: '5%'
     },
     card: {
         display: 'flex',
@@ -108,9 +108,9 @@ export default class Projects extends Component {
         const { activeIndex } = this.state
         return (
             <div>
-                <Divider style={style.dividerContainer} hidden horizontal>
+                <Divider style={style.dividerContainer}  horizontal>
                     <Header style={style.skillsText} as='h4'>
-                        Projects<b style={{letterSpacing: '-8px'}}>___</b>
+                        Projects
                     </Header>
                 </Divider>
                 <Grid style={style.gridContainer} container columns={3} stackable>

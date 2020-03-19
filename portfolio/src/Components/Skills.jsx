@@ -11,7 +11,7 @@ const style = {
         margin: '2% 0 5% 0'
     },
     dividerContainer: {
-        paddingLeft: '5%'
+        // paddingLeft: '5%'
     },
     segmentSkill: {
         display: 'flex',
@@ -37,9 +37,9 @@ const style = {
 function Skills() {
     return (
         <div>
-            <Divider style={style.dividerContainer} hidden horizontal>
+            <Divider style={style.dividerContainer} horizontal>
                 <Header style={style.skillsText} as='h4'>
-                    Skills<b style={{ letterSpacing: '-8px', color: '' }}>___</b>
+                    Skills
                 </Header>
             </Divider>
                 <p className='skill-description' style={style.skillDescription}>I develop high quality and responsive websites and applications. Here are some of the technologies I have worked on recently.</p>

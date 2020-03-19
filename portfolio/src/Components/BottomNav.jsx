@@ -14,7 +14,7 @@ function BottomNav() {
         <Menu size='large' color='teal' borderless stackable icon >
             <div style={style.name}>
                 <Icon name='copyright outline' />
-                2020 Victor Montoya
+                2020 Victor G M
                 </div>
             <Menu.Item>
                 <a href='https://github.com/thatvictor7' target="_blank">
